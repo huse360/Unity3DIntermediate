@@ -21,7 +21,7 @@ public class Sphere : MonoBehaviour {
 	Vector3 pos;
 	float angle;
 	float angleAmount;
-	int levels = 3;
+	int levels = 7;
 
 	// Use this for initialization
 	void Start () {
@@ -39,7 +39,7 @@ public class Sphere : MonoBehaviour {
 		angleAmount = 2 * Mathf.PI / segments;
 		
 				
-		for (y = 0; y < 4; y ++)
+		for (y = 0; y < levels; y ++)
 		{
 			
 			for (x = 0; x < segments; x ++)
@@ -65,7 +65,7 @@ public class Sphere : MonoBehaviour {
 		int ceil;
 		int floor;
 		
-		for (int k = 0; k < 4 -1; k ++)
+		for (int k = 0; k < levels -1; k ++)
 		{
 			 ceil  = segments * (k+1);
 			 floor = segments * k;
